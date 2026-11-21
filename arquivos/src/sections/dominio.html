@@ -1,0 +1,70 @@
+<!-- 3. DOMÍNIO -->
+<section class="dominio" id="dominio" data-secao="dominio">
+  <div class="dominio__topo" data-revela>
+    <h2 class="titulo">
+      <span class="linha"><span>Comece</span></span>
+      <span class="linha"><span>pelo nome.</span></span>
+    </h2>
+    <p class="corpo">Digite o nome que você quer. O domínio sai grátis no primeiro ano em qualquer plano anual.</p>
+  </div>
+
+  <form class="busca" role="search" novalidate data-busca>
+    <label class="busca__rotulo" for="busca-nome">Nome do seu site</label>
+    <div class="busca__linha">
+      <div class="busca__campo">
+        <span class="busca__espelho" aria-hidden="true"></span>
+        <input class="busca__input" id="busca-nome" name="nome" type="text" inputmode="url" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" maxlength="40" placeholder="videoonetech" aria-describedby="busca-erro">
+        <span class="busca__sufixo" aria-hidden="true"><span class="busca__ponto">.<span class="busca__luz"></span></span><span data-sufixo-resto>com.br</span></span>
+        <span class="busca__cursor" aria-hidden="true"></span>
+      </div>
+      <button class="botao-seta busca__enviar" type="submit" aria-label="Buscar domínio">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10h13M11 4.5 16.5 10 11 15.5"/></svg>
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10h13M11 4.5 16.5 10 11 15.5"/></svg>
+      </button>
+    </div>
+    <p class="busca__erro" id="busca-erro" role="alert"></p>
+  </form>
+
+  <ul class="tlds" aria-live="polite" data-tlds>
+    <li class="tld" data-tld=".com.br" data-preco="39,90">
+      <button class="tld__escolher" type="button" aria-pressed="true">
+        <span class="tld__ponto" aria-hidden="true"></span>
+        <span class="tld__nome">.com.br</span>
+      </button>
+      <span class="tld__estado">Digite um nome</span>
+      <span class="tld__preco">R$ 39,90 por ano</span>
+      <button class="tld__acao" type="button" disabled><span class="rola" data-texto="Registrar">Registrar</span></button>
+      <span class="tld__sugestoes"></span>
+    </li>
+    <li class="tld" data-tld=".com" data-preco="69,90">
+      <button class="tld__escolher" type="button" aria-pressed="false">
+        <span class="tld__ponto" aria-hidden="true"></span>
+        <span class="tld__nome">.com</span>
+      </button>
+      <span class="tld__estado">Digite um nome</span>
+      <span class="tld__preco">R$ 69,90 por ano</span>
+      <button class="tld__acao" type="button" disabled><span class="rola" data-texto="Registrar">Registrar</span></button>
+      <span class="tld__sugestoes"></span>
+    </li>
+    <li class="tld" data-tld=".net" data-preco="79,90">
+      <button class="tld__escolher" type="button" aria-pressed="false">
+        <span class="tld__ponto" aria-hidden="true"></span>
+        <span class="tld__nome">.net</span>
+      </button>
+      <span class="tld__estado">Digite um nome</span>
+      <span class="tld__preco">R$ 79,90 por ano</span>
+      <button class="tld__acao" type="button" disabled><span class="rola" data-texto="Registrar">Registrar</span></button>
+      <span class="tld__sugestoes"></span>
+    </li>
+    <li class="tld" data-tld=".site" data-preco="9,90">
+      <button class="tld__escolher" type="button" aria-pressed="false">
+        <span class="tld__ponto" aria-hidden="true"></span>
+        <span class="tld__nome">.site</span>
+      </button>
+      <span class="tld__estado">Digite um nome</span>
+      <span class="tld__preco">R$ 9,90 no 1º ano</span>
+      <button class="tld__acao" type="button" disabled><span class="rola" data-texto="Registrar">Registrar</span></button>
+      <span class="tld__sugestoes"></span>
+    </li>
+  </ul>
+</section>

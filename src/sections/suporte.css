@@ -1,0 +1,125 @@
+/* 7. suporte 24h: relógio grande + foto do produto à direita, esfumada no preto */
+.suporte {
+  position: relative;
+  min-height: 108vh;
+  display: flex;
+  align-items: center;
+}
+.suporte__foto {
+  position: absolute !important;
+  z-index: 0 !important;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 58%;
+  overflow: hidden;
+  /* esfuma laterais */
+  -webkit-mask-image:
+    linear-gradient(90deg, transparent 0%, transparent 6%, #000 38%, #000 88%, transparent 100%),
+    linear-gradient(180deg, #000 0%, #000 100%);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(90deg, transparent 0%, transparent 6%, #000 38%, #000 88%, transparent 100%),
+    linear-gradient(180deg, #000 0%, #000 100%);
+  mask-composite: intersect;
+}
+/* esfuma alto e baixo por cima da foto (mais forte que a máscara sozinha com object-fit: contain) */
+.suporte__foto::before,
+.suporte__foto::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  pointer-events: none;
+  height: 32%;
+}
+.suporte__foto::before {
+  top: 0;
+  background: linear-gradient(180deg, var(--preto) 0%, color-mix(in srgb, var(--preto) 70%, transparent) 42%, transparent 100%);
+}
+.suporte__foto::after {
+  bottom: 0;
+  background: linear-gradient(0deg, var(--preto) 0%, color-mix(in srgb, var(--preto) 70%, transparent) 42%, transparent 100%);
+}
+.suporte__foto img {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: right center;
+  background: transparent;
+}
+@supports (animation-timeline: view()) {
+  .suporte__foto img {
+    height: 106%;
+    animation: paralaxe-suporte linear both;
+    animation-timeline: view();
+  }
+}
+@keyframes paralaxe-suporte {
+  from { transform: translate3d(0, -4%, 0); }
+  to { transform: translate3d(0, 0, 0); }
+}
+
+.suporte__conteudo {
+  width: 100%;
+  padding: 14vh var(--margem);
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--gap);
+}
+
+/* relógio na escala dos números grandes (antes vinha de numeros.css) */
+.suporte .numero__valor {
+  font-stretch: var(--larga);
+  font-weight: 400;
+  font-size: clamp(76px, 14.6vw, 250px);
+  line-height: 0.86;
+  letter-spacing: -0.045em;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  color: var(--tinta);
+}
+.suporte .numero__legenda {
+  font-size: var(--t-corpo);
+  line-height: 1.5;
+  color: var(--tinta-2);
+}
+.numero--c { grid-column: 1 / span 6; display: block; }
+.numero--c .numero__legenda { margin-top: 18px; padding-bottom: 0; }
+.suporte__relogio { display: inline-flex; }
+.suporte__dois { display: inline-block; animation: segundos 2s steps(1, end) infinite; }
+@keyframes segundos { 50% { opacity: 0.25; } }
+.suporte__texto { grid-column: 1 / span 5; margin-top: clamp(40px, 8vh, 96px); }
+.suporte__texto .corpo { margin-top: 20px; max-width: 42ch; }
+.suporte__texto .botao { margin-top: 30px; }
+
+@media (max-width: 760px) {
+  .suporte { display: block; min-height: 0; }
+  .suporte__foto {
+    position: relative !important;
+    width: 100%;
+    aspect-ratio: 6 / 7;
+    -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 16%, #000 64%, transparent 100%);
+    mask-image: linear-gradient(180deg, transparent 0, #000 16%, #000 64%, transparent 100%);
+  }
+  .suporte__foto::before,
+  .suporte__foto::after { display: none; }
+  .suporte__foto img {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
+    object-position: 50% 40%;
+  }
+  .suporte__conteudo { display: block; padding: 0 var(--margem) 10vh; margin-top: -9vh; }
+  .suporte .numero__valor { font-size: clamp(64px, 21vw, 96px); }
+  .suporte .numero__legenda { margin-top: 14px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .suporte__foto img { animation: none; height: 100%; }
+  .suporte__dois { animation: none; }
+}

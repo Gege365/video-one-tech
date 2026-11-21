@@ -1,0 +1,65 @@
+/* 7. suporte 24h: o relógio de quem visita na escala dos números; a foto entra pela direita, esfumada no preto */
+.suporte {
+  position: relative;
+  min-height: 108vh;
+  display: flex;
+  align-items: center;
+}
+.suporte__foto {
+  position: absolute !important;
+  z-index: 0 !important;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 64%;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 42%), linear-gradient(180deg, transparent 0, #000 18%, #000 78%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(90deg, transparent 0, #000 42%), linear-gradient(180deg, transparent 0, #000 18%, #000 78%, transparent 100%);
+  mask-composite: intersect;
+}
+.suporte__foto img { object-position: 30% 40%; }
+@supports (animation-timeline: view()) {
+  .suporte__foto img {
+    height: 114%;
+    animation: paralaxe-suporte linear both;
+    animation-timeline: view();
+  }
+}
+@keyframes paralaxe-suporte {
+  from { transform: translate3d(0, -7%, 0); }
+  to { transform: translate3d(0, 0, 0); }
+}
+
+.suporte__conteudo {
+  width: 100%;
+  padding: 14vh var(--margem);
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--gap);
+}
+.numero--c { grid-column: 1 / span 6; display: block; }
+.numero--c .numero__legenda { margin-top: 18px; padding-bottom: 0; }
+.suporte__relogio { display: inline-flex; }
+.suporte__dois { display: inline-block; animation: segundos 2s steps(1, end) infinite; }
+@keyframes segundos { 50% { opacity: 0.25; } }
+.suporte__texto { grid-column: 1 / span 5; margin-top: clamp(40px, 8vh, 96px); }
+.suporte__texto .corpo { margin-top: 20px; max-width: 34ch; }
+.suporte__texto .botao { margin-top: 30px; }
+
+@media (max-width: 760px) {
+  .suporte { display: block; min-height: 0; }
+  .suporte__foto {
+    position: relative !important;
+    width: 100%;
+    aspect-ratio: 6 / 7;
+    -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 16%, #000 64%, transparent 100%);
+    mask-image: linear-gradient(180deg, transparent 0, #000 16%, #000 64%, transparent 100%);
+  }
+  .suporte__foto img { object-position: 50% 40%; }
+  .suporte__conteudo { display: block; padding: 0 var(--margem) 10vh; margin-top: -9vh; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .suporte__foto img { animation: none; height: 100%; }
+  .suporte__dois { animation: none; }
+}

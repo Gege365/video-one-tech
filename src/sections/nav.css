@@ -43,7 +43,7 @@
   justify-self: start;
   display: inline-flex;
   align-items: center;
-  height: 52px;
+  height: 68px;
   transition: transform 0.25s var(--ease-snap);
 }
 .nav__logo img {
@@ -171,7 +171,7 @@
   .nav { grid-template-columns: 1fr auto; }
   .nav__grupo { display: none; }
   .nav__marca { display: none; }
-  .nav__logo { height: 44px; }
+  .nav__logo { height: 56px; }
   .nav__menu { display: inline-flex; }
 }
 

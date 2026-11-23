@@ -1,4 +1,4 @@
-/* Norte — base: reset, tipo, botões, links, revelação por linha */
+/* Video One — base: reset, tipo, botões, links, revelação por linha */
 *,
 *::before,
 *::after { box-sizing: border-box; }
@@ -97,7 +97,7 @@ main > section > *,
 }
 .ponto-voo.is-voando { opacity: 1; }
 
-/* palavra gigante em baixo contraste (hero "Online", rodapé "Norte") */
+/* palavra gigante em baixo contraste (hero "Video One", rodapé "Video One") */
 .palavra {
   margin: 0;
   font-stretch: var(--larga);

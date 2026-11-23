@@ -2,7 +2,7 @@
 // Estados: vazio, digitando, procurando, disponível, indisponível (com sugestões), erro.
 import { definir, ler } from './estado.js';
 
-const COMUNS = ['loja', 'casa', 'site', 'norte', 'google', 'brasil', 'web', 'app', 'blog', 'shop', 'store',
+const COMUNS = ['loja', 'casa', 'site', 'videoone', 'google', 'brasil', 'web', 'app', 'blog', 'shop', 'store',
   'teste', 'meusite', 'empresa', 'online', 'digital', 'studio', 'estudio', 'agencia', 'cafe', 'padaria'];
 // quanto cada terminação costuma estar ocupada (0 a 1): data-ocupacao em cada <li class="tld"> do HTML; sem ele, 0,3
 const OCUPACAO = {};

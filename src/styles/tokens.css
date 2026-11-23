@@ -1,4 +1,4 @@
-/* Norte — tokens. A página inteira usa só estas variáveis: trocar a paleta é mudar este arquivo (e a cor de fundo do
+/* Video One — tokens. A página inteira usa só estas variáveis: trocar a paleta é mudar este arquivo (e a cor de fundo do
    <head> do index.html). O acento é a única cor: a luz dos pontos do globo, o botão claro, o ponto do ".com" e os pontos
    acesos. ?tema=azul e ?tema=verde mostram outros acentos. Regra: o acento fica claro o bastante para o texto escuro do
    botão (--sobre-acento) e para brilhar sobre o preto. */

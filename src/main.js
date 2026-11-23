@@ -59,7 +59,7 @@ let globo = null;
       if (visivel || visivelAntes) globo.desenhar();
       visivelAntes = visivel;
     });
-    if (import.meta.env.DEV) window.__norte = { globo, coreografia, L };
+    if (import.meta.env.DEV) window.__videoOne = { globo, coreografia, L };
     globo.onPronto = () => {
       canvas.classList.add('is-pronto');
       coreografia.acender(performance.now() / 1000);

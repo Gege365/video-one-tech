@@ -19,6 +19,8 @@ export default defineConfig({
   plugins: [secoes()],
   // base relativa: o dist/ abre em qualquer pasta da hospedagem, não só na raiz do domínio
   base: './',
+  // sem fallback SPA: /modelos/.../index.html não pode virar o site principal
+  appType: 'mpa',
   server: { port: 5183, strictPort: true },
   preview: { port: 5183, strictPort: true },
   build: {

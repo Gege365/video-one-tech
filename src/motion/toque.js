@@ -16,7 +16,7 @@ export function iniciarToque() {
   }, { passive: true });
 
   // toque: o mesmo estado do hover por um instante, só se o dedo não arrastar
-  const SELETOR = '.link, .botao, .botao-seta, .botao-verde, .nav__marca, .nav__logo, .nav__menu, .menu__link, .plano, .modelo, .tld__escolher, .tld__acao, .sugestao, .alternador button, .rodape__status';
+  const SELETOR = '.link, .botao, .botao-seta, .botao-verde, .nav__marca, .nav__logo, .nav__menu, .menu__link, .plano, .modelo, .tld__escolher, .tld__acao, .sugestao, .alternador button, .rodape__status, .card-site__hit, .sites-modal__fechar';
   let alvo = null;
   let timer = 0;
   let x0 = 0;

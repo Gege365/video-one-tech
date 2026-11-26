@@ -1,4 +1,4 @@
-<!-- SITES PROFISSIONAIS — escolha o visual; a Video One adapta ao negócio -->
+<!-- SITES PROFISSIONAIS — grade leve com preview em scroll + modal -->
 <section class="sites" id="sites" data-secao="sites">
   <div class="sites__destaque" data-revela>
     <p class="sites__rotulo">Posicione sua marca online</p>
@@ -6,89 +6,60 @@
       <span class="sites__ponto" aria-hidden="true"></span>
       <h2 class="sites__nome">Sites Profissionais</h2>
     </div>
-    <p class="sites__subtitulo">Escolha seu Modelo! Posicione sua Marca!</p>
-    <p class="sites__promessa">Escolha o modelo que mais combina com você. Nós adaptamos para a sua marca, o seu tom e o seu negócio.</p>
+    <p class="sites__subtitulo">Modelos Video One — escolha o visual da sua marca.</p>
+    <p class="sites__promessa">Cada miniatura mostra a hero do site. Clique para ver o modelo ao vivo, preço e comprar. Adaptamos tudo à sua identidade.</p>
   </div>
 
   <ul class="sites__valor" aria-label="O que está incluso">
-    <li>Landing Pages ideais para vendas de curso</li>
-    <li>Sites com Secretária Virtual para captação de Leads</li>
-    <li>Sites Profissionais Pessoais</li>
-    <li>Sites Empresariais</li>
-    <li>Responsivo Computador e Celular</li>
-    <li>Muito mais.</li>
+    <li>Modelos feitos pela Video One</li>
+    <li>Adaptamos à sua marca e ao seu negócio</li>
+    <li>Domínio incluso</li>
+    <li>Responsivo computador e celular</li>
   </ul>
 
-  <ul class="sites__cards">
-    <li class="card-site">
-      <figure class="card-site__foto">
-        <img src="/img/site-pessoal.jpg" alt="Modelo Clínica — site claro e sofisticado" width="1200" height="800" loading="lazy" decoding="async">
-      </figure>
-      <div class="card-site__corpo">
-        <h3 class="card-site__titulo">Modelo Clínica</h3>
-        <p class="card-site__tag">Visual limpo e sofisticado</p>
-        <button class="botao-verde" type="button"><span class="rola" data-texto="Ver Modelo">Ver Modelo</span></button>
-      </div>
-    </li>
-
-    <li class="card-site">
-      <figure class="card-site__foto">
-        <img src="/img/site-landing.jpg" alt="Modelo Campanha — landing page de vendas" width="1200" height="800" loading="lazy" decoding="async">
-      </figure>
-      <div class="card-site__corpo">
-        <h3 class="card-site__titulo">Modelo Campanha</h3>
-        <p class="card-site__tag">Visual forte para conversão</p>
-        <button class="botao-verde" type="button"><span class="rola" data-texto="Ver Modelo">Ver Modelo</span></button>
-      </div>
-    </li>
-
-    <li class="card-site">
-      <figure class="card-site__foto">
-        <img src="/img/site-secretaria.jpg" alt="Modelo Escritório — site com atendimento" width="1200" height="800" loading="lazy" decoding="async">
-      </figure>
-      <div class="card-site__corpo">
-        <h3 class="card-site__titulo">Modelo Escritório</h3>
-        <p class="card-site__tag">Visual premium com presença</p>
-        <button class="botao-verde" type="button"><span class="rola" data-texto="Ver Modelo">Ver Modelo</span></button>
-      </div>
-    </li>
-
-    <li class="card-site">
-      <figure class="card-site__foto">
-        <img src="/img/site-empresarial.jpg" alt="Modelo Advogado — site pessoal profissional" width="1200" height="800" loading="lazy" decoding="async">
-      </figure>
-      <div class="card-site__corpo">
-        <h3 class="card-site__titulo">Modelo Pessoal</h3>
-        <p class="card-site__tag">Visual elegante e autoritário</p>
-        <button class="botao-verde" type="button"><span class="rola" data-texto="Ver Modelo">Ver Modelo</span></button>
-      </div>
-    </li>
-
-    <li class="card-site">
-      <figure class="card-site__foto">
-        <img src="/img/site-consultoria.jpg" alt="Modelo Consultoria — site moderno de serviços" width="1200" height="800" loading="lazy" decoding="async">
-      </figure>
-      <div class="card-site__corpo">
-        <h3 class="card-site__titulo">Modelo Consultoria</h3>
-        <p class="card-site__tag">Visual moderno e direto</p>
-        <button class="botao-verde" type="button"><span class="rola" data-texto="Ver Modelo">Ver Modelo</span></button>
-      </div>
-    </li>
-
-    <li class="card-site">
-      <figure class="card-site__foto">
-        <img src="/img/site-curso.jpg?v=2" alt="Modelo Landing Page — venda de curso com videoaula, comprar e área do aluno" width="1200" height="800" loading="lazy" decoding="async">
-      </figure>
-      <div class="card-site__corpo">
-        <h3 class="card-site__titulo">Modelo Landing Page</h3>
-        <p class="card-site__tag">Videoaula, comprar e área do aluno</p>
-        <button class="botao-verde" type="button"><span class="rola" data-texto="Ver Modelo">Ver Modelo</span></button>
-      </div>
-    </li>
-  </ul>
+  <ul class="sites__cards" data-sites-grade aria-label="Modelos de sites"></ul>
 
   <div class="sites__fecho" data-revela>
     <p class="sites__fecho-texto">Gostou de um modelo? A gente personaliza com a sua identidade.</p>
-    <a class="botao" href="#suporte"><span class="rola" data-texto="Falar com a Equipe">Falar com a Equipe</span></a>
+    <a class="botao" href="https://wa.me/5534998335489?text=Ol%C3%A1!%20Quero%20um%20site%20sob%20medida." target="_blank" rel="noopener noreferrer"><span class="rola" data-texto="Falar com a Equipe">Falar com a Equipe</span></a>
   </div>
 </section>
+
+<div class="sites-modal" data-sites-modal hidden>
+  <div class="sites-modal__backdrop" data-sites-backdrop></div>
+  <div class="sites-modal__painel" data-sites-painel role="dialog" aria-modal="true" aria-labelledby="sites-modal-nome">
+    <button class="sites-modal__fechar" type="button" data-sites-fechar aria-label="Fechar">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 5l10 10M15 5 5 15"/></svg>
+    </button>
+    <div class="sites-modal__grid">
+      <div class="sites-modal__preview" aria-hidden="true">
+        <img class="sites-modal__poster" data-sites-poster src="" alt="" width="900" height="1400" decoding="async">
+        <div class="sites-modal__scaler">
+          <iframe class="sites-modal__iframe" data-sites-frame title="Preview do modelo" tabindex="-1"></iframe>
+        </div>
+      </div>
+      <div class="sites-modal__info">
+        <p class="sites-modal__tipo" data-sites-tipo></p>
+        <h3 class="sites-modal__nome" id="sites-modal-nome" data-sites-nome></h3>
+        <div class="sites-modal__preco-bloco">
+          <p class="sites-modal__preco" data-sites-preco></p>
+          <p class="sites-modal__preco-obs" data-sites-preco-obs></p>
+          <p class="sites-modal__preco-parc" data-sites-preco-parc></p>
+        </div>
+        <p class="sites-modal__texto">Adaptamos este site à sua marca e ao seu negócio.</p>
+        <ul class="sites-modal__beneficios">
+          <li><span class="sites-modal__check" aria-hidden="true"></span> Domínio incluso</li>
+          <li><span class="sites-modal__check" aria-hidden="true"></span> Secretária Virtual para captação de leads 24h por dia no seu site</li>
+          <li><span class="sites-modal__check" aria-hidden="true"></span> Sem mensalidade! Pagamento único</li>
+          <li><span class="sites-modal__check" aria-hidden="true"></span> Entrega em até 7 dias</li>
+        </ul>
+        <p class="sites-modal__ideal-rotulo">Ideal para</p>
+        <ul class="sites-modal__ideal" data-sites-ideal></ul>
+        <div class="sites-modal__acoes">
+          <a class="botao sites-modal__vivo" data-sites-vivo href="#" target="_blank" rel="noopener noreferrer" hidden><span class="rola" data-texto="Ver Site">Ver Site</span></a>
+          <a class="botao-verde sites-modal__comprar" data-sites-comprar href="#" target="_blank" rel="noopener noreferrer"><span class="rola" data-texto="Quero este Modelo">Quero este Modelo</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

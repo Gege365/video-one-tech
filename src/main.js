@@ -11,6 +11,7 @@ import { iniciarNav } from './motion/nav.js';
 import { iniciarBarra } from './motion/barra.js';
 import { iniciarToque, montarRola } from './motion/toque.js';
 import { iniciarModelos } from './motion/modelos.js';
+import { iniciarSites } from './motion/sites.js';
 import { iniciarRelogio } from './motion/relogio.js';
 import { ajustarPalavras } from './motion/layout.js';
 
@@ -20,6 +21,7 @@ if (reduzido) html.classList.add('reduzido');
 montarRola();
 prepararLinhas();
 const modelos = iniciarModelos();
+iniciarSites();
 iniciarRelogio();
 medirTudo();
 // nada transiciona no primeiro quadro (a trava inline do <head>): libera depois de dois quadros

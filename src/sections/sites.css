@@ -509,9 +509,10 @@ html.sites-modal-aberto body {
     font-size: 11px;
   }
   .sites-modal__acoes {
-    margin-top: auto;
+    margin-top: 14px;
     gap: 8px;
-    padding-top: 10px;
+    padding-top: 4px;
+    padding-bottom: 12px;
   }
   .sites-modal__comprar,
   .sites-modal__comprar.botao-verde {
